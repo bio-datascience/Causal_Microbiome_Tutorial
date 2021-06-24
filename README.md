@@ -2,7 +2,7 @@ Randomization-based causal inference framework to analyze 16s rRNA gut microbiom
 =======================================================================================
 
 Causal inference framework for environment-microbiome data applied to
-American Gut data.
+American Gut Project (AGP) data.
 
 Framework
 ---------
