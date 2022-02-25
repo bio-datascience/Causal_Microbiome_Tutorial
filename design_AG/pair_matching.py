@@ -27,7 +27,7 @@ def pairModuloDist(treated=np.array, control=np.array, nb_levels=int):
     categorical_treated = False
     t_str_value = []
     
-    for i in t:
+    for i in treated:
         if isinstance(i, str):
             t_str_value.append(True)
             
@@ -35,13 +35,13 @@ def pairModuloDist(treated=np.array, control=np.array, nb_levels=int):
         categorical_treated = True
     
     if categorical_treated:
-        treated = pd.get_dummies(treated)
+        treated = pd.get_dummies(treated, dummy_na=True)
         treated = treated.values.argmax(1)
         
     categorical_control = False
     c_str_value = []
     
-    for i in t:
+    for i in control:
         if isinstance(i, str):
             c_str_value.append(True)
             
